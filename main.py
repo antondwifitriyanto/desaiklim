@@ -14,11 +14,11 @@ if uploaded_file:
         f.write(uploaded_file.getbuffer())
 
     # Baca file SHP
-    gdf = gpd.read_file("zip://temp.zip")
+    #gdf = gpd.read_file("zip://temp.zip")
 
     # Tampilkan GeoDataFrame
     st.write("Dataframe dari shapefile:")
-    st.dataframe(gdf)
+    #st.dataframe(gdf)
 
     # Visualisasi di peta dengan Folium
     m = folium.Map(location=[gdf.geometry.centroid.y.mean(), gdf.geometry.centroid.x.mean()], zoom_start=10)
